@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PSNavigationBar.h"
+#import "PSListViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,17 @@
     [[PSNavigationBar appearance] setTintColor:[UIColor magentaColor]];
     [[PSNavigationBar appearance] setNavShadowColor:[UIColor lightGrayColor]];
 //    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+    
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    UIWindow* window = [[UIWindow alloc] initWithFrame:rect];
+    [window setBackgroundColor:[UIColor whiteColor]];
+    self.window = window;
+    
+    PSListViewController* controller = [[PSListViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:controller];
+    [_window setRootViewController:nav];
+    
+    [_window makeKeyAndVisible];
     
     return YES;
 }

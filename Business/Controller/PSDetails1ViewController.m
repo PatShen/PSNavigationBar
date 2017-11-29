@@ -1,30 +1,37 @@
 //
-//  ViewController.m
+//  PSDetails1ViewController.m
 //  NavigationBar
 //
-//  Created by Shen Wenxin on 2017/8/25.
+//  Created by Shen Wenxin on 2017/11/29.
 //  Copyright © 2017年 NanJing HOGE Software Co., Ltd. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <Masonry/Masonry.h>
-#import "PSNavigationBar.h"
-#import "UIViewController+PSNavigationBar.h"
+#import "PSDetails1ViewController.h"
 
-@interface ViewController ()
+@interface PSDetails1ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PSDetails1ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    [self.view setBackgroundColor:[UIColor colorWithRed:230/255.0f green:230/255.0f blue:230/255.0f alpha:1.0f]];
-    
+    // Do any additional setup after loading the view.
     NSString* title = @"协同/内容助手/直播互动组";
     self.title = title;
+    
+    [self prepareSystemNavigationBar];
+    [self prepareCustomNavigationBar];
+    [self prepareSwitchButton];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+// MARK: Prepare
+- (void)prepareSystemNavigationBar {
     UIBarButtonItem* item = nil;
     
     NSMutableArray* left = [NSMutableArray array];
@@ -33,17 +40,11 @@
     
     item = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(itemTouched:)];
     [left addObject:item];
-//
-//    item = [[UIBarButtonItem alloc] initWithTitle:@"第3个" style:UIBarButtonItemStylePlain target:self action:@selector(itemTouched:)];
-//    [left addObject:item];
-//    
-//    item = [[UIBarButtonItem alloc] initWithTitle:@"第4个" style:UIBarButtonItemStylePlain target:self action:@selector(itemTouched:)];
-//    [left addObject:item];
-//    
+    
     self.navigationItem.leftBarButtonItems = left;
-//
+    
+    
     NSMutableArray* right = [NSMutableArray array];
-
     
     item = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(itemTouched:)];
     [right addObject:item];
@@ -51,24 +52,14 @@
     item = [[UIBarButtonItem alloc] initWithTitle:@"图片" style:UIBarButtonItemStylePlain target:self action:@selector(itemTouched:)];
     [right addObject:item];
     
-//
-//    item = [[UIBarButtonItem alloc] initWithTitle:@"第3个" style:UIBarButtonItemStylePlain target:self action:@selector(itemTouched:)];
-//    [right addObject:item];
-//    
-//    item = [[UIBarButtonItem alloc] initWithTitle:@"第4个" style:UIBarButtonItemStylePlain target:self action:@selector(itemTouched:)];
-//    [right addObject:item];
-//    
     self.navigationItem.rightBarButtonItems = right;
-    
+}
+
+- (void)prepareCustomNavigationBar {
     PSNavigationBar* bar = [PSNavigationBar new];
-//    [bar setBackgroundColor:[UIColor colorWithRed:249/255.0f green:249/255.0f blue:249.0f/255.0f alpha:1.0f]];
     [bar setBackgroundColor:[UIColor whiteColor]];
-//    [bar setNavShadowColor:[UIColor clearColor]];
-//    [bar setNavTitleTextAttributes:@{NSFontAttributeName:(id)[UIFont boldSystemFontOfSize:17.0f]}];
     [self.view addSubview:bar];
-    
-    [bar setTitle:title];
-    
+    [bar setTitle:self.title];
     
     [bar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(bar.superview).with.offset(0);
@@ -77,27 +68,20 @@
         make.height.mas_equalTo(64);
     }];
     
-    left = [NSMutableArray array];
+    NSMutableArray* left = [NSMutableArray array];
     
     UIButton* button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"返回" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(backTouched:) forControlEvents:UIControlEventTouchUpInside];
     [left addObject:button];
     
     button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"关闭" forState:UIControlStateNormal];
     [left addObject:button];
     
-//    button = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [button setTitle:@"3" forState:UIControlStateNormal];
-//    [left addObject:button];
-//    
-//    button = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [button setTitle:@"4" forState:UIControlStateNormal];
-//    [left addObject:button];
-    
     [bar setLeftItems:left];
     
-    right = [NSMutableArray array];
+    NSMutableArray* right = [NSMutableArray array];
     
     button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"更多" forState:UIControlStateNormal];
@@ -108,17 +92,9 @@
     [right addObject:button];
     
     [bar setRightItems:right];
-    
-//    UINavigationBar* navBar = [UINavigationBar new];
-//    [self.view addSubview:navBar];
-//    
-//    [navBar mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(bar.mas_bottom).with.offset(80);
-//        make.leading.equalTo(navBar.superview);
-//        make.trailing.equalTo(navBar.superview);
-//        make.height.mas_equalTo(64);
-//    }];
-    
+}
+
+- (void)prepareSwitchButton {
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeSystem];
     [btn setTitle:@"switch" forState:UIControlStateNormal];
     [btn sizeToFit];
@@ -130,12 +106,13 @@
     }];
 }
 
-- (void)backTouched:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
+// MARK: Touched Events
 - (void)itemTouched:(id)sender {
     
+}
+
+- (void)backTouched:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)switchButtonTouchedd:(id)sender {
@@ -143,10 +120,14 @@
     [self.navigationController setNavigationBarHidden:!hidden animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+/*
+#pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

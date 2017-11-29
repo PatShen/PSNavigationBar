@@ -14,6 +14,12 @@
 		710E73C61F4FC757006D1256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710E73C41F4FC757006D1256 /* Main.storyboard */; };
 		710E73C81F4FC757006D1256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710E73C71F4FC757006D1256 /* Assets.xcassets */; };
 		710E73CB1F4FC757006D1256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710E73C91F4FC757006D1256 /* LaunchScreen.storyboard */; };
+		7118B04D1FCE5F3B0016DED0 /* PSBaseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118B04A1FCE5F3B0016DED0 /* PSBaseDetailsViewController.m */; };
+		7118B04E1FCE5F3B0016DED0 /* PSListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118B04C1FCE5F3B0016DED0 /* PSListViewController.m */; };
+		7118B0511FCE5F840016DED0 /* PSDetails1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118B0501FCE5F840016DED0 /* PSDetails1ViewController.m */; };
+		7118B0541FCE5F8E0016DED0 /* PSDetails2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118B0531FCE5F8E0016DED0 /* PSDetails2ViewController.m */; };
+		7118B0571FCE5F980016DED0 /* PSDetails3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118B0561FCE5F980016DED0 /* PSDetails3ViewController.m */; };
+		7118B05A1FCE5FA20016DED0 /* PSDetails4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118B0591FCE5FA20016DED0 /* PSDetails4ViewController.m */; };
 		7180A9EE1F53186700F5A747 /* PSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180A9EB1F53186700F5A747 /* PSNavigationBar.m */; };
 		7180A9EF1F53186700F5A747 /* UIViewController+PSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180A9ED1F53186700F5A747 /* UIViewController+PSNavigationBar.m */; };
 /* End PBXBuildFile section */
@@ -30,6 +36,19 @@
 		710E73C71F4FC757006D1256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		710E73CA1F4FC757006D1256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		710E73CC1F4FC757006D1256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7118B0401FCE59C20016DED0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7118B0491FCE5F3B0016DED0 /* PSBaseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSBaseDetailsViewController.h; sourceTree = "<group>"; };
+		7118B04A1FCE5F3B0016DED0 /* PSBaseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSBaseDetailsViewController.m; sourceTree = "<group>"; };
+		7118B04B1FCE5F3B0016DED0 /* PSListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSListViewController.h; sourceTree = "<group>"; };
+		7118B04C1FCE5F3B0016DED0 /* PSListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSListViewController.m; sourceTree = "<group>"; };
+		7118B04F1FCE5F840016DED0 /* PSDetails1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSDetails1ViewController.h; sourceTree = "<group>"; };
+		7118B0501FCE5F840016DED0 /* PSDetails1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDetails1ViewController.m; sourceTree = "<group>"; };
+		7118B0521FCE5F8E0016DED0 /* PSDetails2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSDetails2ViewController.h; sourceTree = "<group>"; };
+		7118B0531FCE5F8E0016DED0 /* PSDetails2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDetails2ViewController.m; sourceTree = "<group>"; };
+		7118B0551FCE5F980016DED0 /* PSDetails3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSDetails3ViewController.h; sourceTree = "<group>"; };
+		7118B0561FCE5F980016DED0 /* PSDetails3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDetails3ViewController.m; sourceTree = "<group>"; };
+		7118B0581FCE5FA20016DED0 /* PSDetails4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSDetails4ViewController.h; sourceTree = "<group>"; };
+		7118B0591FCE5FA20016DED0 /* PSDetails4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDetails4ViewController.m; sourceTree = "<group>"; };
 		7180A9EA1F53186700F5A747 /* PSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSNavigationBar.h; sourceTree = "<group>"; };
 		7180A9EB1F53186700F5A747 /* PSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSNavigationBar.m; sourceTree = "<group>"; };
 		7180A9EC1F53186700F5A747 /* UIViewController+PSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PSNavigationBar.h"; sourceTree = "<group>"; };
@@ -61,6 +80,7 @@
 		710E73AF1F4FC757006D1256 = {
 			isa = PBXGroup;
 			children = (
+				7118B0471FCE5F3B0016DED0 /* Business */,
 				7180A9E91F53186700F5A747 /* PSNavigationBar */,
 				710E73BA1F4FC757006D1256 /* NavigationBar */,
 				710E73B91F4FC757006D1256 /* Products */,
@@ -97,8 +117,36 @@
 			isa = PBXGroup;
 			children = (
 				710E73BC1F4FC757006D1256 /* main.m */,
+				7118B0401FCE59C20016DED0 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7118B0471FCE5F3B0016DED0 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				7118B0481FCE5F3B0016DED0 /* Controller */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		7118B0481FCE5F3B0016DED0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7118B0491FCE5F3B0016DED0 /* PSBaseDetailsViewController.h */,
+				7118B04A1FCE5F3B0016DED0 /* PSBaseDetailsViewController.m */,
+				7118B04B1FCE5F3B0016DED0 /* PSListViewController.h */,
+				7118B04C1FCE5F3B0016DED0 /* PSListViewController.m */,
+				7118B04F1FCE5F840016DED0 /* PSDetails1ViewController.h */,
+				7118B0501FCE5F840016DED0 /* PSDetails1ViewController.m */,
+				7118B0521FCE5F8E0016DED0 /* PSDetails2ViewController.h */,
+				7118B0531FCE5F8E0016DED0 /* PSDetails2ViewController.m */,
+				7118B0551FCE5F980016DED0 /* PSDetails3ViewController.h */,
+				7118B0561FCE5F980016DED0 /* PSDetails3ViewController.m */,
+				7118B0581FCE5FA20016DED0 /* PSDetails4ViewController.h */,
+				7118B0591FCE5FA20016DED0 /* PSDetails4ViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		7180A9E91F53186700F5A747 /* PSNavigationBar */ = {
@@ -155,7 +203,7 @@
 				TargetAttributes = {
 					710E73B71F4FC757006D1256 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -197,13 +245,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NavigationBar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		51CF65107DA10AD5D56F84BD /* [CP] Copy Pods Resources */ = {
@@ -244,10 +295,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7180A9EE1F53186700F5A747 /* PSNavigationBar.m in Sources */,
+				7118B04D1FCE5F3B0016DED0 /* PSBaseDetailsViewController.m in Sources */,
 				710E73C31F4FC757006D1256 /* ViewController.m in Sources */,
 				710E73C01F4FC757006D1256 /* AppDelegate.m in Sources */,
 				7180A9EF1F53186700F5A747 /* UIViewController+PSNavigationBar.m in Sources */,
+				7118B0541FCE5F8E0016DED0 /* PSDetails2ViewController.m in Sources */,
+				7118B0571FCE5F980016DED0 /* PSDetails3ViewController.m in Sources */,
+				7118B04E1FCE5F3B0016DED0 /* PSListViewController.m in Sources */,
+				7118B0511FCE5F840016DED0 /* PSDetails1ViewController.m in Sources */,
 				710E73BD1F4FC757006D1256 /* main.m in Sources */,
+				7118B05A1FCE5FA20016DED0 /* PSDetails4ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,10 +425,14 @@
 			baseConfigurationReference = 9E57937B23DF5F07E0821756 /* Pods-NavigationBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = NavigationBar/PrefixHeader.pch;
 				INFOPLIST_FILE = NavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoge.NavigationBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -380,10 +441,14 @@
 			baseConfigurationReference = 5FCA15979EE7EB2643031EFF /* Pods-NavigationBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = NavigationBar/PrefixHeader.pch;
 				INFOPLIST_FILE = NavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoge.NavigationBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

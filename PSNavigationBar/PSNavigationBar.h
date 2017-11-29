@@ -14,6 +14,19 @@ typedef NS_ENUM(NSUInteger, WCNavVerticalGravity) {
     WCNavVerticalGravityBottom,
 };
 
+/**
+ 导航栏的隐藏模式
+ 
+ - PSNavHiddenModeContent: 隐藏背景图、分隔线、标题
+ - PSNavHiddenModeBottomLine: 只隐藏分隔线
+ - PSNavHiddenModeAll: 全部隐藏
+ */
+typedef NS_ENUM(NSUInteger, PSNavHiddenMode) {
+    PSNavHiddenModeContent,
+    PSNavHiddenModeBottomLine,
+    PSNavHiddenModeAll,
+};
+
 
 @interface PSNavigationBar : UIView
 
@@ -65,5 +78,43 @@ typedef NS_ENUM(NSUInteger, WCNavVerticalGravity) {
  内边距，默认值：(top:20,left:0,bottom:0,right:0)
  */
 @property (nonatomic, assign) UIEdgeInsets navPadding;
+
+/**
+ A Boolean value indicating whether the title should be displayed in a large format.
+ 
+ 设置为YES之后，标题会移动到左侧，左侧按钮消失；否则标题居中显示;
+ 
+ 可以通过 +barWithLargeTitle 进行初始化设置
+ */
+@property (nonatomic, assign) BOOL prefersLargeTitles;
+
+/**
+ 导航栏的隐藏模式，会在 -updateBackgroundAlpha: 调用时生效
+ 
+ 默认值为 PSNavHiddenModeContent
+ */
+@property (nonatomic, assign) PSNavHiddenMode hiddenMode;
+
+
+/**
+ 设置背景部分的透明度，背景部分包括：背景图和底部分隔线（不需要手动设置背景色）
+ 
+ @param alpha 透明度
+ */
+- (void)updateBackgroundAlpha:(CGFloat)alpha;
+
+/**
+ iOS11 之前的版本，使用 topLayoutGuide 约束
+ 
+ @param topAttribute 顶部约束
+ */
+- (void)updateTopAttribute:(id)topAttribute;
+
+@end
+
+
+
+
+@interface PSNavigationBar (PSNavigationBarCreation)
 
 @end

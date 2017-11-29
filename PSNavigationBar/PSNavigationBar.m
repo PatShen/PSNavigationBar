@@ -440,3 +440,12 @@ static NSInteger const tag_nav_right_items = 50020;
 }
 
 @end
+
+
+
+
+@implementation PSNavigationBar (PSNavigationBarCreation)
+
+
+
+@end
